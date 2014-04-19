@@ -1,0 +1,40 @@
+{
+    "name": "WMTranslate",
+    "version": "1.0",
+    "description" : "基于有道翻译的 Chrome 插件实现, 采用了本地 localStorage 存储更高效，并且支持选中自动发音，提供了3中提示窗口可自定义选择！【作者：SIMMAN EMAIL:liwei0990@gmail.com】",
+    "manifest_version": 2,
+    // 权限声明
+    "permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*", 
+        "notifications",
+        "audio"
+    ],
+    // 图标
+    "icons": 
+    {  
+      "48": "icon.png"
+    },  
+
+    // 允许使用右键菜单
+    "permissions": ["contextMenus","tabs","<all_urls>"],
+
+    "background": {
+      "scripts": ["jquery-2.1.0.min.js", "background.js"]
+    },
+    "browser_action": 
+    {  
+    	"default_icon": "icon.png" ,
+    	"default_title": "Chrome Translate",
+    	"default_popup": "popup.html"
+  	},  
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "css" : ["cluetip.css"],
+          "js": ["jquery-2.1.0.min.js", "Translate.js"]
+        }
+      ]
+    
+}

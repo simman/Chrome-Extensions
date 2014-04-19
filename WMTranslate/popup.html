@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Task List</title>
+</head>
+<body>
+	<input type="submit" value="发音"> 
+</div>
+</body>
+</html>
+
+
+    var youdaoTTSUrl = "http://tts.youdao.com/fanyivoice?keyfrom=fanyi%2Eweb%2Eindex&le={{lang}}&word={{text}}";
+    
+    var TTSUrl = encodeURI("http://tts.youdao.com/fanyivoice?keyfrom=fanyi%2Eweb%2Eindex&le={{lang}}&word={{text}}".replace("{{lang}}", 'en').replace("{{text}}", words)); Media = new Audio(TTSUrl); Media.play();
+
+    Media = new Audio(TTSUrl);
+
+    if (Media.paused) {
+        Media.startTime = 0;
+    }
+
+    Media.play();
+
+
+<script type="text/javascript">function playThisWords(){ var TTSUrl = encodeURI("http://tts.youdao.com/fanyivoice?keyfrom=fanyi%2Eweb%2Eindex&le={{lang}}&word={{text}}"); Media = new Audio(TTSUrl); Media.play();}</script>
